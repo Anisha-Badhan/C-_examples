@@ -40,7 +40,7 @@ namespace ConsoleApp1
         static String MyString(){
             Console.WriteLine("Enter a String: ");
             String str = Console.ReadLine();
-            if (str[0] == 'I' || str[0] == 'i' || str[1] == 'f' || str[1] == 'F'){
+            if (str[0] == 'I' || str[0] == 'i' && (str[1] == 'f' || str[1] == 'F')){
                 return str;
             }
             else
