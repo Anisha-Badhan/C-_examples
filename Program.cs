@@ -7,7 +7,7 @@ namespace ConsoleApp1
         
         static void Main(string[] args)
         {
-           Console.WriteLine(MyMethod());           
+           Console.WriteLine(MyString());           
          }
 
         static int MyMethod()
@@ -34,6 +34,18 @@ namespace ConsoleApp1
                 return false;
             }else{
                 return false;
+            }
+        }
+
+        static String MyString(){
+            Console.WriteLine("Enter a String: ");
+            String str = Console.ReadLine();
+            if (str[0] == 'I' || str[0] == 'i' || str[1] == 'f' || str[1] == 'F'){
+                return str;
+            }
+            else
+            {
+                return String.Concat("If", str);
             }
         }
     }
