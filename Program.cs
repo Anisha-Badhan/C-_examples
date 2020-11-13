@@ -4,14 +4,11 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            hello how are you
-            Console.WriteLine(Check4CHash());
+        static void Main(string[] args){
+             Console.WriteLine(Check4CHash());
         }
 
-        public static int MyMethod()
-        {
+        public static int MyMethod(){
             Console.WriteLine("Enter 1st Integer: ");
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter 2nd Integer: ");
