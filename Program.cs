@@ -7,9 +7,10 @@ namespace ConsoleApp1
         
         static void Main(string[] args)
         {
-           Console.WriteLine(MyString());           
-         }
+           Console.WriteLine(RmoveChr());           
+        }
 
+        
         static int MyMethod()
         {
             Console.WriteLine("Enter 1st Integer: ");
@@ -37,10 +38,12 @@ namespace ConsoleApp1
             }
         }
 
-        static String MyString(){
+        static String MyString()
+        {
             Console.WriteLine("Enter a String: ");
             String str = Console.ReadLine();
-            if (str[0] == 'I' || str[0] == 'i' && (str[1] == 'f' || str[1] == 'F')){
+            if (str[0] == 'I' || str[0] == 'i' && (str[1] == 'f' || str[1] == 'F'))
+            {
                 return str;
             }
             else
@@ -48,5 +51,16 @@ namespace ConsoleApp1
                 return String.Concat("If", str);
             }
         }
+
+            static String RmoveChr(){
+                Console.WriteLine("Enter a String: ");
+                String str = Console.ReadLine();
+                Console.WriteLine("Enter index: ");
+                int index = Convert.ToInt32(Console.ReadLine());
+
+                str = str.Remove(index, 1);
+                return str;
+            }
+        
     }
 }
