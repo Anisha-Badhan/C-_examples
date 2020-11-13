@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            hello
+            hello how are you
             Console.WriteLine(Check4CHash());
         }
 
