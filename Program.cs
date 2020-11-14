@@ -71,6 +71,23 @@ namespace ConsoleApp1
         {
             return (x >= 20 && x <= 50) || (y >= 20 && y <= 50) || (z >= 20 && z <= 50);
         }
+        
+        public static void ArrRotation(int[] arr, int d)
+        {
+            int[] arr1 = new int[arr.Length] ;
+            for(int i = d; i < arr.Length; i++)
+            {
+                arr1[i-d] = arr[i];
+            }
+            for (int i = 0; i < d; i++) 
+            {
+                arr1.SetValue(arr[i], arr.Length - d + i);
+            }
+            foreach (int i in arr1)
+            {
+                System.Console.Write("{0} ", i);
+            }
+        }
     }
             
 } 
