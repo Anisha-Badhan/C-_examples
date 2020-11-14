@@ -7,56 +7,29 @@ namespace ConsoleApp1
         // Please don't use console.writeline inside the methods, call the methods from Main() and pass parameters.
         
         static void Main(string[] args){
-             Console.WriteLine(Check4CHash());
+             MyMethod(4, 5);
         }
 
-        public static int MyMethod(){
-            Console.WriteLine("Enter 1st Integer: ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter 2nd Integer: ");
-            int b = Convert.ToInt32(Console.ReadLine());
+        public static int MyMethod(int a int b){
             
             // This is good, but can you try to use Ternary Opertor here to make it compact.
             int result = 0;
-            if (a == b){
-                result = 3 * (a + b);
-            }else{
-                result = a + b;
-            }
-            return result;
+            return (a == b ? 3 * (a + b) : a + b);
         }
 
-        public static bool IfThirty()
+        public static bool IfThirty(int a int b)
         {
-            Console.WriteLine("Enter 1st Integer: ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter 2nd Integer: ");
-            int b = Convert.ToInt32(Console.ReadLine());
-            
             // This is good, but can you try to use Ternary Opertor here to make it compact.
-            int result = 0;
-            if (a == 30 || b == 30 || (a + b) == 30){
-                return false;
-            }else{
-                return false;
-            }
+            return (a == 30 || b == 30 || (a + b) == 30)
         }
 
-        public static String MyString()
+        public static String MyString(String str)
         {
-            Console.WriteLine("Enter a String: ");
-            String str = Console.ReadLine();
-            
             // Wrap the condition in () --> (str.StartsWith("IF") || str.StartsWith("if") || str.StartsWith("If"))
             return (str.StartsWith("IF") || str.StartsWith("if") || str.StartsWith("If") ? str : String.Concat("If", str));
         }
 
-        public static String RmoveChr(){
-            Console.WriteLine("Enter a String: ");
-            String str = Console.ReadLine();
-            Console.WriteLine("Enter index (range form 0 to " + (str.Length - 1) + "): ");
-            int index = Convert.ToInt32(Console.ReadLine());
-            
+        public static String RmoveChr(String str int index){
             // Wrap the condition in ()
             return (index < str.Length - 1? str = str.Remove(index, 1):("Please enter index within range(0 to " + (str.Length - 1) + ")"));
         }
