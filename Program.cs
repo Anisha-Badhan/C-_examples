@@ -48,7 +48,7 @@ namespace ConsoleApp1
             String str = Console.ReadLine();
             
             // Wrap the condition in () --> (str.StartsWith("IF") || str.StartsWith("if") || str.StartsWith("If"))
-            return str.StartsWith("IF") || str.StartsWith("if") || str.StartsWith("If") ? str : String.Concat("If", str);
+            return (str.StartsWith("IF") || str.StartsWith("if") || str.StartsWith("If") ? str : String.Concat("If", str));
         }
 
         public static String RmoveChr(){
@@ -58,7 +58,7 @@ namespace ConsoleApp1
             int index = Convert.ToInt32(Console.ReadLine());
             
             // Wrap the condition in ()
-            return index < str.Length - 1? str = str.Remove(index, 1):("Please enter index within range(0 to " + (str.Length - 1) + ")");
+            return (index < str.Length - 1? str = str.Remove(index, 1):("Please enter index within range(0 to " + (str.Length - 1) + ")"));
         }
 
         // Look for a Method called Substring() and try to do this question with that.
@@ -92,7 +92,7 @@ namespace ConsoleApp1
             int StrLen = str.Length;
             
             // Wrap the condition in ()
-            return StrLen < 3 ? str + str + str : str.Substring(0, 3) + str + str.Substring(0, 3); 
+            return (StrLen < 3 ? str + str + str : str.Substring(0, 3) + str + str.Substring(0, 3)); 
         }
 
         public static bool Check4CHash(){
