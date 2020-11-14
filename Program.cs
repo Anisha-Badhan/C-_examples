@@ -4,6 +4,8 @@ namespace ConsoleApp1
 {
     class Program
     {
+        // Please don't use console.writeline inside the methods, call the methods from Main() and pass parameters.
+        
         static void Main(string[] args){
              Console.WriteLine(Check4CHash());
         }
@@ -13,6 +15,8 @@ namespace ConsoleApp1
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter 2nd Integer: ");
             int b = Convert.ToInt32(Console.ReadLine());
+            
+            // This is good, but can you try to use Ternary Opertor here to make it compact.
             int result = 0;
             if (a == b){
                 result = 3 * (a + b);
@@ -28,6 +32,8 @@ namespace ConsoleApp1
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter 2nd Integer: ");
             int b = Convert.ToInt32(Console.ReadLine());
+            
+            // This is good, but can you try to use Ternary Opertor here to make it compact.
             int result = 0;
             if (a == 30 || b == 30 || (a + b) == 30){
                 return false;
@@ -40,6 +46,8 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Enter a String: ");
             String str = Console.ReadLine();
+            
+            // Wrap the condition in () --> (str.StartsWith("IF") || str.StartsWith("if") || str.StartsWith("If"))
             return str.StartsWith("IF") || str.StartsWith("if") || str.StartsWith("If") ? str : String.Concat("If", str);
         }
 
@@ -48,9 +56,12 @@ namespace ConsoleApp1
             String str = Console.ReadLine();
             Console.WriteLine("Enter index (range form 0 to " + (str.Length - 1) + "): ");
             int index = Convert.ToInt32(Console.ReadLine());
+            
+            // Wrap the condition in ()
             return index < str.Length - 1? str = str.Remove(index, 1):("Please enter index within range(0 to " + (str.Length - 1) + ")");
         }
 
+        // Look for a Method called Substring() and try to do this question with that.
         public static String Exchange() {
             Console.WriteLine("Enter a String: ");
             String str = Console.ReadLine();
@@ -79,6 +90,8 @@ namespace ConsoleApp1
             Console.WriteLine("Enter a string: ");
             String str = Console.ReadLine();
             int StrLen = str.Length;
+            
+            // Wrap the condition in ()
             return StrLen < 3 ? str + str + str : str.Substring(0, 3) + str + str.Substring(0, 3); 
         }
 
