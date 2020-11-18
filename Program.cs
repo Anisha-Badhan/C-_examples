@@ -162,6 +162,52 @@ namespace ConsoleApp1
             int length = end - start + 1;
             return str.Substring(start, length);
         }
+        
+        
+        /*
+         * @param int n
+         * @paran Array
+         * @return void
+        */
+        public static void name_validity(int n, String[] arr)
+        {
+            String x = "";
+            for (int i = 0; i < arr.Length; i++)
+            {
+                
+                if (arr[i].Length < 8 || arr[i].Length > 30 )
+                {
+                    Console.WriteLine(arr[i] + " Invalid Name");
+                }
+                else
+                {
+                    x = arr[i];
+                    int m = 0;
+                    if (!Char.IsLetter(x[0]))
+                    {
+                        Console.WriteLine(x + " Invalid Name");
+                    }
+                    else
+                    {
+
+                        for (int j = 1; j < x.Length - 1; j++)
+                        {
+
+                            if (((int)x[j] >= 65 && (int)x[j] <= 90) || ((int)x[j] >= 97 && (int)x[j] <= 122) || Char.IsDigit(x[j]) || (int)x[j] == 95)
+                            {
+                                m = 0;
+                            }
+                            else
+                            {
+                                m = m + 1;
+                            }
+                        }
+                        Console.WriteLine(m != 0 ? x + " Invalid Name" : x + " Valid name");
+                    }
+                }
+            }
+            
+        }
 
     }
 }
