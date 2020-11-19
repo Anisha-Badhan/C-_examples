@@ -164,7 +164,7 @@ namespace ConsoleApp1
         }
         
         
-        /*
+       /*
          * @param int n
          * @paran Array
          * @return void
@@ -174,8 +174,7 @@ namespace ConsoleApp1
             String x = "";
             for (int i = 0; i < arr.Length; i++)
             {
-                
-                if (arr[i].Length < 8 || arr[i].Length > 30 )
+                if (arr[i].Length < 8 || arr[i].Length > 30)
                 {
                     Console.WriteLine(arr[i] + " Invalid Name");
                 }
@@ -189,15 +188,9 @@ namespace ConsoleApp1
                     }
                     else
                     {
-
-                        for (int j = 1; j < x.Length - 1; j++)
+                        for (int j = 1; j < x.Length; j++)
                         {
-
-                            if (((int)x[j] >= 65 && (int)x[j] <= 90) || ((int)x[j] >= 97 && (int)x[j] <= 122) || Char.IsDigit(x[j]) || (int)x[j] == 95)
-                            {
-                                m = 0;
-                            }
-                            else
+                            if ((int)x[j] < 47 || ((int)x[j] >= 58 && (int)x[j] <= 64) || ((int)x[j] >= 91 && (int)x[j] <= 94) || (int)x[j] == 93)
                             {
                                 m = m + 1;
                             }
@@ -208,7 +201,6 @@ namespace ConsoleApp1
             }
             
         }
-
     }
 }
         
