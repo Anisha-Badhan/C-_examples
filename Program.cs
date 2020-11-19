@@ -12,6 +12,17 @@ namespace ConsoleApp1
             Console.WriteLine(print_subStr("HelloWorld", "1 4"));
             String[] arr = { "Julia", "Samantha", "Samantha_21", "1samantha", "Samatha?10_2A" };
             name_validity(5, arr);
+            
+            
+            String[] param = { "lmnop", "bcxz" };
+
+            string[] result = funnyString(param);
+
+            for(int i =0; i < result.Length; i++)
+            {
+                Console.WriteLine(result[i]);
+
+            }
         }
 
         /*
@@ -203,25 +214,34 @@ namespace ConsoleApp1
         }
         
         /*
-         * @paran String s
-         * @return String
+         * @param int q
+         * @param string s
+         * @return String[]
         */
-        public static String funnyString(String s)
+       public static String[] funnyString(int q,String[] s)
         {
-            char[] arr = s.ToCharArray();
-            Array.Reverse(arr);
-            String r = new string(arr);
-            int temp = 0;
-            for (int i = 1; i < arr.Length; i++)
+            String[] results=new string[q];
+
+            for(int k = 0; k < s.Length; k++)
             {
-                int x = Math.Abs((int)s[i] - (int)s[i-1]);
-                int y = Math.Abs((int)r[i] - (int)r[i-1]);
-                if(x != y)
+                char[] arr = s[k].ToCharArray();
+                Array.Reverse(arr);
+                String r = new string(arr);
+                int temp = 0;
+                for (int i = 1; i < arr.Length; i++)
                 {
-                    temp = temp+1;
+                    int x = Math.Abs((int)s[k][i] - (int)s[k][i - 1]);
+                    int y = Math.Abs((int)r[i] - (int)r[i - 1]);
+                    if (x != y)
+                    {
+                        temp = temp + 1;
+                    }
                 }
+                results[k] = (temp != 0 ? "Not funny" : "Funny string");
             }
-             return (temp != 0 ? "Not funny" : "Funny string");
+
+            return results;
+            
         }
     }
 }
