@@ -201,6 +201,28 @@ namespace ConsoleApp1
             }
             
         }
+        
+        /*
+         * @paran String s
+         * @return String
+        */
+        public static String funnyString(String s)
+        {
+            char[] arr = s.ToCharArray();
+            Array.Reverse(arr);
+            String r = new string(arr);
+            int temp = 0;
+            for (int i = 1; i < arr.Length; i++)
+            {
+                int x = Math.Abs((int)s[i] - (int)s[i-1]);
+                int y = Math.Abs((int)r[i] - (int)r[i-1]);
+                if(x != y)
+                {
+                    temp = temp+1;
+                }
+            }
+             return (temp != 0 ? "Not funny" : "Funny string");
+        }
     }
 }
         
