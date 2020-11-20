@@ -215,7 +215,7 @@ namespace ConsoleApp1
         
         /*
          * @param int q
-         * @param string s
+         * @param string[] s
          * @return String[]
          */
        public static String[] funnyString(int q,String[] s)
