@@ -23,6 +23,9 @@ namespace ConsoleApp1
                 Console.WriteLine(result[i]);
 
             }
+            
+            String[] z = {"ABBAB","AABBA","AmABB"};
+            noRepeat(3,z);
         }
 
        /*
@@ -275,11 +278,11 @@ namespace ConsoleApp1
                 }
                 if (invalid != 0)
                 {
-                    Console.WriteLine("Invalid string");
+                    Console.WriteLine(s[k] + " Invalid string");
                 }
                 else
                 {
-                    Console.WriteLine(temp);
+                    Console.WriteLine(s[k] + "  " + temp);
                 }
             }
         }
