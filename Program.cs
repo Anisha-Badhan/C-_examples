@@ -243,6 +243,39 @@ namespace ConsoleApp1
             return results;
             
         }
+        
+        /*
+         * @param int q
+         * @param String[] s
+         * @return int[]
+         */
+        public static int[] noRepeat(int q, String[] s)
+        {
+            int[] deletion = new int[q];
+            for (int k = 0; k < s.Length; k++)
+            {
+                int temp = 0;
+                for (int i = 0; i < s[i].Length; i++)
+                {
+                    for(int j = 0; j < s[i].Length; j++)
+                    {
+                        if (s[i][j] != 'A' || s[i][j] != 'B')
+                        {
+                            Console.WriteLine("not a valid string");
+                        }
+                        else
+                        {
+                            if (s[i][j] == s[i][j+1])
+                            {
+                                temp += 1;
+                            }
+                        }
+                        deletion[i] = temp;
+                    }
+                }
+            }
+            return deletion;
+        }
     }
 }
         
